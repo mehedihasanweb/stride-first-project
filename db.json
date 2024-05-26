@@ -3,15 +3,16 @@
     {
       "id": "001",
       "brand": "Apple",
-      "price": 999.99,
-      "description": "The latest iPhone model with advanced features and stunning design.",
+      "price": "1000",
+      "description": "adfasdfasdf",
       "title": "iPhone 14 Pro",
-      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
+      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg",
+      "number": "1500"
     },
     {
       "id": "002",
       "brand": "Samsung",
-      "price": 899.99,
+      "price": "900",
       "description": "A high-performance smartphone with a sleek design and powerful camera.",
       "title": "Samsung Galaxy S21",
       "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
@@ -38,14 +39,6 @@
       "price": 199.99,
       "description": "High-quality Bluetooth speakers with exceptional sound clarity.",
       "title": "Bose SoundLink Revolve",
-      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
-    },
-    {
-      "id": "006",
-      "brand": "Nike",
-      "price": 149.99,
-      "description": "Comfortable and stylish running shoes designed for performance.",
-      "title": "Nike Air Zoom Pegasus 37",
       "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
     }
   ]

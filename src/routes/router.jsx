@@ -11,6 +11,7 @@ import PrivateRoute from "./private/PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
 import AllProducts from "../pages/Dashboard/AllProducts";
 import AddProduct from "../pages/Dashboard/AddProduct";
+import EditProduct from "../pages/Dashboard/EditProduct";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,12 @@ const router = createBrowserRouter([
       {
         path: "dashboard/add-products",
         element: <AddProduct />,
+      },
+      {
+        path: "dashboard/all-products/edit/:id",
+        element: <EditProduct />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/phones/${params.id}`),
       },
     ],
   },
