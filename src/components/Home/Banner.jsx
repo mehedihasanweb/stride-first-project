@@ -3,7 +3,7 @@ import banner from "../../../public/banner.jpg";
 const Banner = () => {
   return (
     <div
-      className="hero min-h-[550px]"
+      className="hero min-h-[550px] "
       style={{
         backgroundImage: `url(${banner})`,
       }}
