@@ -1,0 +1,52 @@
+{
+  "phones": [
+    {
+      "id": "001",
+      "brand": "Apple",
+      "price": 999.99,
+      "description": "The latest iPhone model with advanced features and stunning design.",
+      "title": "iPhone 14 Pro",
+      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
+    },
+    {
+      "id": "002",
+      "brand": "Samsung",
+      "price": 899.99,
+      "description": "A high-performance smartphone with a sleek design and powerful camera.",
+      "title": "Samsung Galaxy S21",
+      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
+    },
+    {
+      "id": "003",
+      "brand": "Sony",
+      "price": 299.99,
+      "description": "A top-quality pair of noise-cancelling headphones for immersive sound experience.",
+      "title": "Sony WH-1000XM4",
+      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
+    },
+    {
+      "id": "004",
+      "brand": "Dell",
+      "price": 1199.99,
+      "description": "A powerful laptop with cutting-edge performance and sleek design.",
+      "title": "Dell XPS 13",
+      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
+    },
+    {
+      "id": "005",
+      "brand": "Bose",
+      "price": 199.99,
+      "description": "High-quality Bluetooth speakers with exceptional sound clarity.",
+      "title": "Bose SoundLink Revolve",
+      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
+    },
+    {
+      "id": "006",
+      "brand": "Nike",
+      "price": 149.99,
+      "description": "Comfortable and stylish running shoes designed for performance.",
+      "title": "Nike Air Zoom Pegasus 37",
+      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
+    }
+  ]
+}
