@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const EditProduct = () => {
   const phone = useLoaderData();
@@ -32,7 +33,17 @@ const EditProduct = () => {
       body: JSON.stringify(formData),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data);
+        if (data) {
+          Swal.fire({
+            title: "Success!",
+            text: "Phone Updated Successfully",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+        }
+      });
   };
 
   return (

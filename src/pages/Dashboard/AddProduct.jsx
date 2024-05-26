@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const AddProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,8 +22,16 @@ const AddProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data) {
+          Swal.fire({
+            title: "Success!",
+            text: "Phone Updated Successfully",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+        }
         form.reset();
+        console.log(data);
       });
   };
 
@@ -36,6 +46,7 @@ const AddProduct = () => {
                 type="text"
                 name="title"
                 placeholder="Title"
+                required
                 className="bg-gray-100 p-4 w-full lg:w-[350px] border border-black rounded-lg"
               />
             </div>

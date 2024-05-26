@@ -3,11 +3,10 @@
     {
       "id": "001",
       "brand": "Apple",
-      "price": "1000",
-      "description": "adfasdfasdf",
+      "price": "1050",
+      "description": "The latest iPhone model with advanced features and stunning design.",
       "title": "iPhone 14 Pro",
-      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg",
-      "number": "1500"
+      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
     },
     {
       "id": "002",
@@ -19,26 +18,50 @@
     },
     {
       "id": "003",
-      "brand": "Sony",
-      "price": 299.99,
-      "description": "A top-quality pair of noise-cancelling headphones for immersive sound experience.",
-      "title": "Sony WH-1000XM4",
-      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
+      "brand": "Google",
+      "price": "799",
+      "description": "A smart and intuitive phone with the best of Google built-in.",
+      "title": "Google Pixel 6",
+      "imageurl": "https://img.freepik.com/free-photo/modern-smartphone-device-digital-device-connection_53876-131682.jpg"
     },
     {
       "id": "004",
-      "brand": "Dell",
-      "price": 1199.99,
-      "description": "A powerful laptop with cutting-edge performance and sleek design.",
-      "title": "Dell XPS 13",
-      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
+      "brand": "OnePlus",
+      "price": "750",
+      "description": "A flagship killer with a high refresh rate display and fast charging.",
+      "title": "OnePlus 9 Pro",
+      "imageurl": "https://img.freepik.com/free-photo/top-view-modern-smartphone-with-minimal-design_23-2148850444.jpg"
     },
     {
       "id": "005",
-      "brand": "Bose",
-      "price": 199.99,
-      "description": "High-quality Bluetooth speakers with exceptional sound clarity.",
-      "title": "Bose SoundLink Revolve",
+      "brand": "Xiaomi",
+      "price": "680",
+      "description": "A value-for-money phone with a large battery and impressive camera setup.",
+      "title": "Xiaomi Mi 11",
+      "imageurl": "https://img.freepik.com/free-photo/smartphone-device-composition-wooden-table_23-2149064882.jpg"
+    },
+    {
+      "id": "006",
+      "brand": "Huawei",
+      "price": "850",
+      "description": "A stylish phone with a powerful processor and advanced AI features.",
+      "title": "Huawei P40 Pro",
+      "imageurl": "https://img.freepik.com/free-photo/modern-smartphone-device-digital-device-connection_53876-131682.jpg"
+    },
+    {
+      "id": "08",
+      "title": "eeeeeeeeeeeeee",
+      "brand": "Samsung",
+      "number": "455",
+      "description": "A high-performance smartphone with a sleek design and powerful camera.",
+      "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
+    },
+    {
+      "id": "07",
+      "title": "aaa",
+      "brand": "Samsung",
+      "number": "455",
+      "description": "A high-performance smartphone with a sleek design and powerful camera.",
       "imageurl": "https://img.freepik.com/premium-photo/smartphone-mockup_863013-69568.jpg"
     }
   ]
