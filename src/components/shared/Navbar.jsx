@@ -5,13 +5,19 @@ const Navbar = () => {
   const navItems = (
     <>
       <li>
-        <Link to={"/"}>Home</Link>
+        <Link to={"/"} className="text-xl font-semibold">
+          Home
+        </Link>
       </li>
       <li>
-        <Link to={"/about"}>About</Link>
+        <Link to={"/about"} className="text-xl font-semibold">
+          About
+        </Link>
       </li>
       <li>
-        <Link to={"/dashboard"}>Dashboard</Link>
+        <Link to={"/dashboard"} className="text-xl font-semibold">
+          Dashboard
+        </Link>
       </li>
     </>
   );

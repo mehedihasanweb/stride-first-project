@@ -12,6 +12,7 @@ import ErrorPage from "../pages/ErrorPage";
 import AllProducts from "../pages/Dashboard/AllProducts";
 import AddProduct from "../pages/Dashboard/AddProduct";
 import EditProduct from "../pages/Dashboard/EditProduct";
+import UpdateProfile from "../pages/Dashboard/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -22,13 +23,13 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        loader: () => fetch("http://localhost:3000/phones"),
+        loader: () => fetch("http://localhost:5000/phones"),
       },
       {
         path: "/products/:id",
         element: <ProductDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/phones/${params.id}`),
+          fetch(`http://localhost:5000/phones/${params.id}`),
       },
       {
         path: "/about",
@@ -66,10 +67,16 @@ const router = createBrowserRouter([
         element: <AddProduct />,
       },
       {
-        path: "dashboard/all-products/edit/:id",
+        path: "all-products/edit/:id",
         element: <EditProduct />,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/phones/${params.id}`),
+          fetch(`http://localhost:5000/phones/${params.id}`),
+      },
+      {
+        path: "update-profile/update/:id",
+        element: <UpdateProfile />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/user/update/${params.id}`),
       },
     ],
   },

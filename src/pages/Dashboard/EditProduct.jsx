@@ -4,38 +4,39 @@ import Swal from "sweetalert2";
 
 const EditProduct = () => {
   const phone = useLoaderData();
-  console.log(phone);
 
   const [title, setTitle] = useState(phone.title);
   const [brand, setBrand] = useState(phone.brand);
-  const [id, setId] = useState(phone.id);
-  const [price, setPrice] = useState(phone.price);
+  const [price, setPrice] = useState(phone.number);
   const [description, setDescription] = useState(phone.description);
   const [imageurl, setImageurl] = useState(phone.imageurl);
 
+  const token = localStorage.getItem("token");
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const form = e.target;
-    const id = form.id.value;
     const title = form.title.value;
     const brand = form.brand.value;
-    const price = form.price.value;
+    const number = form.number.value;
     const description = form.description.value;
     const imageurl = form.image_url.value;
 
-    const formData = { id, title, brand, price, description, imageurl };
+    const formData = { title, brand, number, description, imageurl };
     console.log(formData);
 
-    await fetch(`http://localhost:3000/phones/${phone.id}`, {
+    await fetch(`http://localhost:5000/phones/${phone._id}`, {
       method: "PATCH",
-      headers: { "Content-type": "application/json" },
+      headers: {
+        "Content-type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
       body: JSON.stringify(formData),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data) {
+        if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
             text: "Phone Updated Successfully",
@@ -78,7 +79,7 @@ const EditProduct = () => {
             <div className="mt-4">
               <input
                 type="text"
-                name="price"
+                name="number"
                 placeholder="Price"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
@@ -105,16 +106,6 @@ const EditProduct = () => {
                 placeholder="IMAGE_URL"
                 value={imageurl}
                 onChange={(e) => setImageurl(e.target.value)}
-                className="bg-gray-100 p-4 w-full lg:w-[350px] border border-black rounded-lg"
-              />
-            </div>
-            <div className="mt-4">
-              <input
-                type="text"
-                name="id"
-                placeholder="ID"
-                value={id}
-                onChange={(e) => setId(e.target.value)}
                 className="bg-gray-100 p-4 w-full lg:w-[350px] border border-black rounded-lg"
               />
             </div>

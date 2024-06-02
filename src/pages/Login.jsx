@@ -18,7 +18,6 @@ const Login = () => {
     const password = form.password.value;
 
     console.log(email, password);
-
     signIn(email, password);
   };
 
@@ -88,6 +87,7 @@ const Login = () => {
           <h1 className="text-5xl font-bold">Login Now!!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            <br />
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>

@@ -6,7 +6,7 @@ const AllProducts = () => {
   const [allData, setAllData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/phones")
+    fetch("http://localhost:5000/phones")
       .then((res) => res.json())
       .then((data) => setAllData(data));
   }, []);
@@ -23,7 +23,7 @@ const AllProducts = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/phones/${id}`, {
+        fetch(`http://localhost:5000/phones/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -34,7 +34,7 @@ const AllProducts = () => {
               text: "Your file has been deleted.",
               icon: "success",
             });
-            const remaining = allData.filter((data) => data.id !== id);
+            const remaining = allData.filter((data) => data._id !== id);
             setAllData(remaining);
           });
       } else {
@@ -50,7 +50,7 @@ const AllProducts = () => {
         {allData.map((phone) => (
           <SingleProductCardDashboard
             phone={phone}
-            key={phone.id}
+            key={phone._id}
             onDelete={handleDeleteProduct}
           />
         ))}

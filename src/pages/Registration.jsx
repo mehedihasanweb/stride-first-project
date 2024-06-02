@@ -16,6 +16,7 @@ const Registration = () => {
 
     const form = e.target;
     const email = form.email.value;
+    const name = form.name.value;
     const password = form.password.value;
     const confirm_password = form.confirm_password.value;
 
@@ -25,8 +26,30 @@ const Registration = () => {
 
     console.log(email, password, confirm_password);
 
-    if (password === confirm_password) {
-      createUser(email, password);
+    if (password !== confirm_password) {
+      setPassMatch(false);
+      setTimeout(() => {
+        setPassMatch(true);
+      }, 4000);
+    } else {
+      createUser(email, password).then((data) => {
+        console.log(data?.user?.email);
+        if (data?.user?.email) {
+          const userData = {
+            name: name,
+            email: data?.user?.email,
+          };
+          fetch("http://localhost:5000/user", {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify(userData),
+          })
+            .then((res) => res.json())
+            .then((data) => console.log(data));
+        }
+      });
     }
   };
 
@@ -43,12 +66,24 @@ const Registration = () => {
           <h1 className="text-5xl font-bold">Registration now!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            <br /> excepturi exercitationem quasi. In deleniti eaque aut
+            repudiandae et a id nisi.
           </p>
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleRegistration} className="card-body">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="input input-bordered"
+                required
+              />
+            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
